@@ -1,9 +1,9 @@
-function countdown() {
-    const timer = document.getElementById("timer")
-    timer.textContent--;
-    if (timer.textContent <= 0) {
-        alert('You have won');
-        clearInterval(clearTimer);
+let sec = document.getElementById('timer');
+
+let timer = setInterval(()=>{
+    sec.innerText--;
+    if (sec.innerText == 0) {
+        alert('Вы победили в конкурсе');
+        clearInterval(timer);
     }
-}
-const clearTimer = setInterval('countdown()', 1000);
+}, 1000);
